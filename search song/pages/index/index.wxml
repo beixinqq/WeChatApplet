@@ -1,0 +1,12 @@
+
+<!--index.wxml-->
+<view class="audio">
+  <input class='input' bindinput="inputValue" placeholder="请输入搜索歌曲" />
+  <view class='list' wx:if='{{listDisplay}}'>
+    <view wx:for='{{songs}}' wx:for-item='song' bindtab='songFn'>
+      <navigator class='list-song' url="../detail/detail?id={{song.songid}}" hover-class="navigator-hover1">
+        <text>{{song.songname}} - {{song.artistname}}</text>
+      </navigator>
+    </view>
+  </view>
+</view>
