@@ -1,0 +1,48 @@
+
+<!--index.wxml-->
+<view>
+
+  <!--0-->
+  <view class='section'>
+    <swiper indicator-dots="true" autoplay="{true" interval="4000" duration="1000">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!--1-->
+  <view class='section'>
+    <view class='header'>
+      <text>精品推荐</text>
+      <text class='text-all'>全部精品</text>
+    </view>
+      <view class='content'>
+        <view class='content-item' wx:for='{{contentIndex}}'>
+            <image src="../../images/img1.png"></image>
+            <text class='content-item-title'>这里是标题</text>
+        </view>
+      </view>
+  </view>
+
+  <!--2-->
+  <view class='section'>
+    <view class='header'>
+      <text>精品推荐</text>
+      <text class='text-all'>全部精品</text>
+    </view>
+    <view class="itemContent" wx:for="{{itemIndex}}">
+      <view class='item-images'>
+        <image class='img1' src="../../images/img2.png"></image>
+        <image class='avatar' src="../../images/avatar.png"></image>
+      </view>
+      <view class='item-imgaes-title'>
+        <view class='item-images-h'>标题标题标题</view>
+        <view class="item-images-c">这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容</view>
+      </view>
+    </view>
+  </view>
+  <!--3-->
+</view>
